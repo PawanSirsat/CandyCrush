@@ -5,3 +5,52 @@ body {
  color: white;
  text-align: center;
 }
+
+#board {
+ width: 450px;
+ height: 450px;
+ background-color: lightblue;
+ border: 5px solid slategray;
+ border-radius: 10px;
+ margin: 0 auto;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+#board img {
+ width: 50px;
+ height: 50px;
+}
+
+/* candy.css */
+
+/* Add this CSS for the candy hover animation */
+.tile {
+ transition: transform 0.3s ease-in-out;
+ /* Add a smooth transition effect */
+}
+
+.tile:hover {
+ transform: scale(1.2);
+ /* Zoom in slightly when hovered */
+}
+
+/* Define an animation for crushed candies */
+@keyframes crushAnimation {
+ 0% {
+  transform: scale(1);
+ }
+
+ 50% {
+  transform: scale(1.5);
+ }
+
+ 100% {
+  transform: scale(0);
+ }
+}
+
+/* Apply the animation to candies */
+.crushed {
+ animation: crushAnimation 0.3s ease forwards;
+}
